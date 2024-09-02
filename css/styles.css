@@ -75,16 +75,12 @@
 /* ------------------------------------------------------------------- 
  * ## fonts 
  * ------------------------------------------------------------------- */
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Serif+Text:ital@0;1&family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
 
 :root {
-
-    --font-1 : "Public Sans", sans-serif;
-    --font-2 : "DM Serif Display", serif;
-
-    /* monospace
-    */
-    --font-mono : Consolas, "Andale Mono", Courier, "Courier New", monospace;
+    --font-1: "Nunito", sans-serif; /* Update this line */
+    --font-2: "Nunito", sans-serif; /* Update this line if you want to use Nunito everywhere */
+    --font-mono: Consolas, "Andale Mono", Courier, "Courier New", monospace;
 }
 
 /* ------------------------------------------------------------------- 
@@ -1271,11 +1267,20 @@ textarea {
  * ## base type styles
  * -------------------------------------------------------------------- */
 body {
-    font-family : var(--font-1);
-    font-size   : var(--base-font-size);
-    font-weight : 300;
-    line-height : var(--vspace-1);
-    color       : var(--color-text);
+    font-family: var(--font-1), sans-serif; /* This applies Nunito to the entire body */
+    font-size: var(--base-font-size);
+    font-weight: 300;
+    line-height: var(--vspace-1);
+    color: var(--color-text);
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: var(--font-2), sans-serif; /* This applies Nunito to all headings */
+    font-weight: 400;
+    color: var(--color-text-dark);
+    font-variant-ligatures: common-ligatures;
+    text-rendering: optimizeLegibility;
 }
 
 /* links
